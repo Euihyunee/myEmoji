@@ -1,4 +1,4 @@
-package com.tukcom2023CD.BackEnd;
+package com.emojiMaker.BackEnd;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

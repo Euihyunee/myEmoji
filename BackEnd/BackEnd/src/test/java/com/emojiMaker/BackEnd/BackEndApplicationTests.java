@@ -1,4 +1,4 @@
-package com.tukcom2023CD.BackEnd;
+package com.emojiMaker.BackEnd;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

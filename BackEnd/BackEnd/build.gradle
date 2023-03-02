@@ -5,7 +5,7 @@ plugins {
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
-group = 'com.tukcom2023CD'
+group = 'com.emojiMaker'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
