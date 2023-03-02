@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class RequestController{
 
     @GetMapping("/stp")
-    public String GetStp(){return "stp";}
+    public String RequestStp(){return "stp";}
 
     @GetMapping("/ptp")
-    public String GetPtp(){return "ptp";}
+    public String RequestPtp(){return "ptp";}
 
     @GetMapping("/withtype")
-    public String GetWithtype(){return "withtype";}
+    public String RequestWithtype(){return "withtype";}
 }

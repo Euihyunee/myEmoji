@@ -12,7 +12,7 @@ public class ResultController{
     public String GetResult(){return "result";}
 
     @GetMapping("/list")
-    public Object GetList(){
+    public Object GetResultList(){
         RandomJson randomJson = new RandomJson();
         randomJson.id = 1;
         randomJson.url = "Sample.com";
@@ -20,5 +20,5 @@ public class ResultController{
     }
 
     @GetMapping("/qr/{id}")
-    public String GetId(@PathVariable int id){return id + " 결과";}
+    public String GetResultByQR(@PathVariable int id){return id + " 결과";}
 }
