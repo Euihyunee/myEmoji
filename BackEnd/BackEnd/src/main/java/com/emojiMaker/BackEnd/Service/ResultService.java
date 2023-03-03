@@ -9,5 +9,5 @@ public class ResultService {
     // 2차 최종 결과 리스트
 
     // QR 코드 다운로드 접근 처리
-    
+
 }
