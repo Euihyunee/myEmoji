@@ -57,7 +57,6 @@ public class MainController {
         requestUserInputDTO.setRequestId(id);
         requestUserInputDTO.setImgUrl("/img/input/" + imgName);
         requestUserInputDTO.setRequestType(enumType);
-        requestUserInputDTO.setFlag(flag);
 
         // save
         map.put(id, requestUserInputDTO);
