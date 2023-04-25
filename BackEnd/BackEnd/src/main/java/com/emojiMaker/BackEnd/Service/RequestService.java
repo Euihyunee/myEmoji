@@ -14,18 +14,20 @@ public class RequestService {
 
     // 디비에 STP 요청정보 저장
     public boolean requestStp(long requestId){
-        RequestUserInputDTO requestUserInputDTO = new RequestUserInputDTO(requestId, RequestType.STP);
-
-        // 디비에 저장되면 ture 리턴
-        return repository.save(requestUserInputDTO);
+//        RequestUserInputDTO requestUserInputDTO = new RequestUserInputDTO(requestId, RequestType.STP, "");
+//
+//        // 디비에 저장되면 ture 리턴
+//        return repository.save(requestUserInputDTO);
+        return true;
     }
 
     // 디비에 PTP 요청정보 저장
     public boolean requestPtp(long requestId){
-        RequestUserInputDTO requestUserInputDTO = new RequestUserInputDTO(requestId, RequestType.PTP);
-
-        // 디비에 저장되면 ture 리턴
-        return repository.save(requestUserInputDTO);
+//        RequestUserInputDTO requestUserInputDTO = new RequestUserInputDTO(requestId, RequestType.PTP,"");
+//
+//        // 디비에 저장되면 ture 리턴
+//        return repository.save(requestUserInputDTO);
+        return true;
     }
 
     // 리쿼스트 with type
