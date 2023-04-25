@@ -31,6 +31,11 @@ public class MainController {
     public String data(){
         return map.toString();
     }
+    @GetMapping("/data/img/{path}")
+    public void imgData(@PathVariable String path){
+
+    }
+
 
     @PostMapping("/demo/request/photo")
     public String requestPhoto(String requestType, MultipartFile imgFile) throws IOException {
@@ -56,25 +61,36 @@ public class MainController {
         // save
         map.put(id, requestUserInputDTO);
 
+
+        // 데모 모킹 (이미 있는 이미지 이름 변경)
+        String path = System.getProperty("user.dir") + "\\src\\main\\resources\\static\\img\\resultTag";
+        File file = new File(path);
+
+
+
+
+
+
         return id;
     }
 
     @GetMapping("/demo/tag")
     public ResponseTagImageDTO getDemoTagImage(@RequestParam RequestDemoDTO requestDemoDTO){
-        String imgUrl = "";
-        String tagName="예시";
-        ResponseTagImageDTO responseTagImageDTO = new ResponseTagImageDTO(tagName, imgUrl);
+        String id = requestDemoDTO.getRequestId();
+
+        // 아이디로 결과물 있는지 조회
+
+        // 결과물 리턴
+
+
+        map.get(id);
+        ResponseTagImageDTO responseTagImageDTO = new ResponseTagImageDTO();
         return responseTagImageDTO;
     }
 
     @GetMapping("/demo/emoji")
     public void getDemoEmojiImage(@RequestParam RequestDemoEmojiDTO requestDemoEmojiDTO){
-        String imgUrl = "";
-        String tagName="예시";
 
-
-
-        ResponseTagImageDTO responseTagImageDTO = new ResponseTagImageDTO(tagName, imgUrl);
     }
 
 
