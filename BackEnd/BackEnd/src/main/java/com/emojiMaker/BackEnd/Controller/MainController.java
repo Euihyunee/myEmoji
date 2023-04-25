@@ -192,7 +192,9 @@ public class MainController {
     }
 
     @GetMapping("/demo/emoji")
-    public void getDemoEmojiImage(@RequestParam RequestDemoEmojiDTO requestDemoEmojiDTO){
+    public void getDemoEmojiImage(@ModelAttribute RequestDemoEmojiDTO requestDemoEmojiDTO){
+        
+
 
     }
 
