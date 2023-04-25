@@ -14,9 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.StandardCopyOption;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 
 @RestController
 public class MainController {
@@ -59,6 +57,7 @@ public class MainController {
         requestUserInputDTO.setRequestId(id);
         requestUserInputDTO.setImgUrl("/img/input/" + imgName);
         requestUserInputDTO.setRequestType(enumType);
+        requestUserInputDTO.setFlag(flag);
 
         // save
         map.put(id, requestUserInputDTO);
@@ -161,17 +160,36 @@ public class MainController {
     }
 
     @GetMapping("/demo/tag")
-    public ResponseTagImageDTO getDemoTagImage(@RequestParam RequestDemoDTO requestDemoDTO){
+    public List<ResponseTagImageDTO> getDemoTagImage(@RequestParam RequestDemoDTO requestDemoDTO){
         String id = requestDemoDTO.getRequestId();
 
-        // 아이디로 결과물 있는지 조회
 
         // 결과물 리턴
+        List<ResponseTagImageDTO> responseTagImageDTOs = new ArrayList<ResponseTagImageDTO>();
+
+        ResponseTagImageDTO responseTagImageDTO1 = new ResponseTagImageDTO("/img/input/tag1/" + id + "_1.png");
+        ResponseTagImageDTO responseTagImageDTO2 = new ResponseTagImageDTO("/img/input/tag1/" + id + "_2.png");
+        ResponseTagImageDTO responseTagImageDTO3 = new ResponseTagImageDTO("/img/input/tag1/" + id + "_3.png");
+        ResponseTagImageDTO responseTagImageDTO4 = new ResponseTagImageDTO("/img/input/tag2/" + id + "_1.png");
+        ResponseTagImageDTO responseTagImageDTO5 = new ResponseTagImageDTO("/img/input/tag2/" + id + "_2.png");
+        ResponseTagImageDTO responseTagImageDTO6 = new ResponseTagImageDTO("/img/input/tag2/" + id + "_3.png");
+        ResponseTagImageDTO responseTagImageDTO7 = new ResponseTagImageDTO("/img/input/tag3/" + id + "_1.png");
+        ResponseTagImageDTO responseTagImageDTO8 = new ResponseTagImageDTO("/img/input/tag3/" + id + "_2.png");
+        ResponseTagImageDTO responseTagImageDTO9 = new ResponseTagImageDTO("/img/input/tag3/" + id + "_3.png");
+
+        responseTagImageDTOs.add(responseTagImageDTO1);
+        responseTagImageDTOs.add(responseTagImageDTO2);
+        responseTagImageDTOs.add(responseTagImageDTO3);
+        responseTagImageDTOs.add(responseTagImageDTO4);
+        responseTagImageDTOs.add(responseTagImageDTO5);
+        responseTagImageDTOs.add(responseTagImageDTO6);
+        responseTagImageDTOs.add(responseTagImageDTO7);
+        responseTagImageDTOs.add(responseTagImageDTO8);
+        responseTagImageDTOs.add(responseTagImageDTO9);
 
 
-        map.get(id);
-        ResponseTagImageDTO responseTagImageDTO = new ResponseTagImageDTO();
-        return responseTagImageDTO;
+
+        return responseTagImageDTOs;
     }
 
     @GetMapping("/demo/emoji")
