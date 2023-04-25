@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ResponseTagImageDTO {
+    String tagName;
     String imgUrl;
 
 }

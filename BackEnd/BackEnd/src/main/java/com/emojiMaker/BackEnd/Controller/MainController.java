@@ -159,22 +159,22 @@ public class MainController {
     }
 
     @GetMapping("/demo/tag")
-    public List<ResponseTagImageDTO> getDemoTagImage(@RequestParam RequestDemoDTO requestDemoDTO){
+    public List<ResponseTagImageDTO> getDemoTagImage(@ModelAttribute RequestDemoDTO requestDemoDTO){
         String id = requestDemoDTO.getRequestId();
 
 
         // 결과물 리턴
         List<ResponseTagImageDTO> responseTagImageDTOs = new ArrayList<ResponseTagImageDTO>();
 
-        ResponseTagImageDTO responseTagImageDTO1 = new ResponseTagImageDTO("/img/input/tag1/" + id + "_1.png");
-        ResponseTagImageDTO responseTagImageDTO2 = new ResponseTagImageDTO("/img/input/tag1/" + id + "_2.png");
-        ResponseTagImageDTO responseTagImageDTO3 = new ResponseTagImageDTO("/img/input/tag1/" + id + "_3.png");
-        ResponseTagImageDTO responseTagImageDTO4 = new ResponseTagImageDTO("/img/input/tag2/" + id + "_1.png");
-        ResponseTagImageDTO responseTagImageDTO5 = new ResponseTagImageDTO("/img/input/tag2/" + id + "_2.png");
-        ResponseTagImageDTO responseTagImageDTO6 = new ResponseTagImageDTO("/img/input/tag2/" + id + "_3.png");
-        ResponseTagImageDTO responseTagImageDTO7 = new ResponseTagImageDTO("/img/input/tag3/" + id + "_1.png");
-        ResponseTagImageDTO responseTagImageDTO8 = new ResponseTagImageDTO("/img/input/tag3/" + id + "_2.png");
-        ResponseTagImageDTO responseTagImageDTO9 = new ResponseTagImageDTO("/img/input/tag3/" + id + "_3.png");
+        ResponseTagImageDTO responseTagImageDTO1 = new ResponseTagImageDTO("태그이름1", "/img/resultTag/tag1/" + id + "_1.png");
+        ResponseTagImageDTO responseTagImageDTO2 = new ResponseTagImageDTO("태그이름1", "/img/resultTag/tag1/" + id + "_2.png");
+        ResponseTagImageDTO responseTagImageDTO3 = new ResponseTagImageDTO("태그이름1", "/img/resultTag/tag1/" + id + "_3.png");
+        ResponseTagImageDTO responseTagImageDTO4 = new ResponseTagImageDTO("태그이름2", "/img/resultTag/tag2/" + id + "_1.png");
+        ResponseTagImageDTO responseTagImageDTO5 = new ResponseTagImageDTO("태그이름2", "/img/resultTag/tag2/" + id + "_2.png");
+        ResponseTagImageDTO responseTagImageDTO6 = new ResponseTagImageDTO("태그이름2", "/img/resultTag/tag2/" + id + "_3.png");
+        ResponseTagImageDTO responseTagImageDTO7 = new ResponseTagImageDTO("태그이름3", "/img/resultTag/tag3/" + id + "_1.png");
+        ResponseTagImageDTO responseTagImageDTO8 = new ResponseTagImageDTO("태그이름3", "/img/resultTag/tag3/" + id + "_2.png");
+        ResponseTagImageDTO responseTagImageDTO9 = new ResponseTagImageDTO("태그이름3",  "/img/resultTag/tag3/" + id + "_3.png");
 
         responseTagImageDTOs.add(responseTagImageDTO1);
         responseTagImageDTOs.add(responseTagImageDTO2);
