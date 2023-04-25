@@ -28,10 +28,9 @@ public class MainController {
     }
 
     @GetMapping("/data")
-    public String  data(){
+    public String data(){
         return map.toString();
     }
-
 
     @PostMapping("/demo/request/photo")
     public String requestPhoto(String requestType, MultipartFile imgFile) throws IOException {
@@ -51,7 +50,7 @@ public class MainController {
         // mapping
         RequestUserInputDTO requestUserInputDTO = new RequestUserInputDTO();
         requestUserInputDTO.setRequestId(id);
-        requestUserInputDTO.setImgUrl("/file/img/input/" + imgName);
+        requestUserInputDTO.setImgUrl("/img/input/" + imgName);
         requestUserInputDTO.setRequestType(enumType);
 
         // save
