@@ -51,7 +51,7 @@ public class MainController {
         // mapping
         RequestUserInputDTO requestUserInputDTO = new RequestUserInputDTO();
         requestUserInputDTO.setRequestId(id);
-        requestUserInputDTO.setImgUrl("/file/" + imgName);
+        requestUserInputDTO.setImgUrl("/file/img/input/" + imgName);
         requestUserInputDTO.setRequestType(enumType);
 
         // save
