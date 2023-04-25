@@ -1,10 +1,10 @@
 package com.emojiMaker.BackEnd.Controller;
 
 import com.emojiMaker.BackEnd.Bean.GerRequestTypeBean;
-import com.emojiMaker.BackEnd.Model.DTO.RequestDemoDTO;
-import com.emojiMaker.BackEnd.Model.DTO.RequestDemoEmojiDTO;
-import com.emojiMaker.BackEnd.Model.DTO.RequestUserInputDTO;
-import com.emojiMaker.BackEnd.Model.DTO.ResponseTagImageDTO;
+import com.emojiMaker.BackEnd.Model.DTO.Request.RequestDemoDTO;
+import com.emojiMaker.BackEnd.Model.DTO.Request.RequestDemoEmojiDTO;
+import com.emojiMaker.BackEnd.Model.DTO.Request.RequestUserInputDTO;
+import com.emojiMaker.BackEnd.Model.DTO.Response.ResponseTagImageDTO;
 import com.emojiMaker.BackEnd.Model.Enum.RequestType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

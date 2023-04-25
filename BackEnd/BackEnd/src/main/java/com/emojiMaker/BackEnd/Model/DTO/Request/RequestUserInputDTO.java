@@ -1,4 +1,4 @@
-package com.emojiMaker.BackEnd.Model.DTO;
+package com.emojiMaker.BackEnd.Model.DTO.Request;
 
 import com.emojiMaker.BackEnd.Model.Enum.RequestType;
 import lombok.AllArgsConstructor;
@@ -12,7 +12,6 @@ import org.springframework.web.multipart.MultipartFile;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RequestUserInputDTO {
-    @Nullable
     private String requestId;
     RequestType requestType;
     String imgUrl;

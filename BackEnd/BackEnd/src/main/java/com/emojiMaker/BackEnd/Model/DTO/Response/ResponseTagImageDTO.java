@@ -1,4 +1,4 @@
-package com.emojiMaker.BackEnd.Model.DTO;
+package com.emojiMaker.BackEnd.Model.DTO.Response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

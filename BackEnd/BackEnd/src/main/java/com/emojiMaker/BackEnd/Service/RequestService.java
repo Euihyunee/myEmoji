@@ -1,7 +1,5 @@
 package com.emojiMaker.BackEnd.Service;
 
-import com.emojiMaker.BackEnd.Model.DTO.RequestUserInputDTO;
-import com.emojiMaker.BackEnd.Model.Enum.RequestType;
 import com.emojiMaker.BackEnd.Model.Enum.TagType;
 import com.emojiMaker.BackEnd.Repository.RequestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
