@@ -12,7 +12,7 @@ public class Image4Bean {
         Case2. status :화풍 완성
             -> request_id로 status확인
             -> findByRequestId 해서 화풍 list 반환
-            # 화풍DAO : id, tag_name, img_url, img, request_id
-     */
+            # 화풍DAO : id, tag_name, img_url, img, request_id */
+
 
 }

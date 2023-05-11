@@ -9,6 +9,5 @@ public class Style2Bean {
         1. Status 조회
         2. Status 수정
         3. DAO 매핑 -> 저장
-        # DAO : Id, request_id, emoji_url, tag_name, emoji_tag
-     */
+        # DAO : Id, request_id, emoji_url, tag_name, emoji_tag */
 }

@@ -10,6 +10,6 @@ public class Image3Bean {
         2. status 수정 (enum 타입)
         3. DAO에 매핑
         4. DB에 DAO 저장
-        # DAO : id, img_url, tag_name, request_id / tag 개수만큼 생김
-    */
+        # DAO : id, img_url, tag_name, request_id / tag 개수만큼 생김 */
+
 }

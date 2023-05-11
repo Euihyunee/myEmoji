@@ -14,6 +14,6 @@ public class Style3Bean {
             -> 이모지 list rkwudhrl
             -> request_id, tag_name 매핑
             -> {emoji_url, emoji_tag} 매핑
-            -> 반환
-     */
+            -> 반환 */
+
 }
