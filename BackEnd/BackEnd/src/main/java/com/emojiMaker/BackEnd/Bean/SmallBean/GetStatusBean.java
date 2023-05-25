@@ -8,11 +8,5 @@ import org.springframework.stereotype.Component;
 @Component
 public class GetStatusBean {
 
-    @Autowired
-    ImgRepository imgRepository;
-
     // TODO Status 가져오는 빈
-    public StatusType exec(Long requestId) {
-        return imgRepository.findByRequestId(requestId);
-    }
 }
