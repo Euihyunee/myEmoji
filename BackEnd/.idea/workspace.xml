@@ -5,13 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebd61c96-0b08-46c9-8e14-e7795d103dfc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Controller/FileUploadUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Model/DTO/Image/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/GetImgUrlBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/GetImgUrlBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/GetRequestIdBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/GetRequestIdBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/GetStatusBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/GetStatusBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/MapImgDTOBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/MapImgDTOBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Controller/ImageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Model/DTO/Image/ImageDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Model/DTO/Image/ImageDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Repository/ImgRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Repository/ImgRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,16 +63,42 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/eui/Desktop/onlyGit/emoji/BackEnd",
+    "last_opened_file_path": "D:/git_source/postrofit",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Suggestions",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
     "spring.configuration.checksum": "4da64989a14d03f6e1a9f02f08cca449",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.BackEndApplication">
+  <component name="RunManager" selected="Spring Boot.BackEndApplication (1)">
+    <configuration name="Tests in 'BackEnd'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/BackEnd" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <configuration name="BackEndApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="BackEnd.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.emojiMaker.BackEnd.BackEndApplication" />
@@ -86,6 +113,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Tests in 'BackEnd'" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -103,5 +135,9 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
