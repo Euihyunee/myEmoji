@@ -11,5 +11,7 @@ public class Image1Bean {
         3. DTO 매핑
         4. DTO에 저장
         # DTO 정보 : request_id, img_url, img ,status */
+    public void exec(){
 
+    }
 }
