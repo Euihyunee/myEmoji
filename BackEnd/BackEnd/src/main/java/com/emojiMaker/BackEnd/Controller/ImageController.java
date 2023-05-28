@@ -9,27 +9,16 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-@Controller
+@RestController
 @RequestMapping("/img")
 @CrossOrigin("*")
 public class ImageController {
 
-    @Autowired
-    private UserRepository repo;
-    // TODO img 들어옴
-    @PostMapping("/uploadImg")
-    public User imgData(User user, @RequestParam("file") MultipartFile file) throws IOException {
-        // TODO Img Upload Test용
-        String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-        user.setPhotos(fileName);
-        User savedUser = repo.save(user);
 
-        String uploadDir = "user-photos/" + savedUser.getId();
+// TODO img 들어옴
 
-        FileUploadUtil.saveFile(uploadDir, fileName, file);
 
-        return user;
-    }
+
 
     // TODO status 수정(도건Server에서 요청 들어옴)
     @PostMapping("/postMethod")
