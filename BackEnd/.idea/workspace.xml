@@ -5,13 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebd61c96-0b08-46c9-8e14-e7795d103dfc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Model/DTO/Image/ImageDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/Image1Bean.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/Image1Bean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/GetImgUrlBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/GetImgUrlBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/GetRequestIdBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/GetRequestIdBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/GetStatusBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/GetStatusBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/MapImgDTOBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/MapImgDTOBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Controller/ImageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Model/DTO/Image/ImageDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Model/DTO/Image/ImageDTO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
