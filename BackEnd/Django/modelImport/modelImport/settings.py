@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-kbtscp&%ab)oj-ko=%9l2*!r*=&jyd$l%6a#%_+-9$$89^lk#i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['54.180.88.174']
 
 
 # Application definition
@@ -77,9 +77,13 @@ WSGI_APPLICATION = "modelImport.wsgi.application"
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'djangotest',
+        'USER': 'root',
+        'PASSWORD': 'admin',
+        'HOST': 'localhost',
+        'PORT': '3306'
     }
 }
 
@@ -102,7 +106,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "ko-kr"
 
-TIME_ZONE = "Asia/SEOUL"
+TIME_ZONE = "Asia/Seoul"
 
 USE_I18N = True
 
