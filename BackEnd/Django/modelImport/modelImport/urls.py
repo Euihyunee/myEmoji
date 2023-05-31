@@ -16,10 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from product.views import ProductListAPI, stable
+from product.views import *
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("api/product/", ProductListAPI.as_view()),
-    path("stable/", stable),
+    path("", check),
+
+    path("api/picture/<str:rq_id>", PictureAPI.as_view()),
+    path("api/emoji/<str:rq_id>", EmojiAPI.as_view()),
+
+    path("stable/<str:rq_id>/<str:paint>", stable),
+    path("style/<str:rq_id>", style),
+
+    path("showImg/<str:rq_id>/<str:t_name>", show_img),
+    path("showEmoji/<str:rq_id>/<str:t_name>/<str:e_name>/<str:s_num>", show_emoji),
+
+    path("test/", test_reqeust),
 ]
