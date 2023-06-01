@@ -13,7 +13,7 @@ public class GetRequestIdBean {
     public String exec(){
         LocalDateTime localDateTime = LocalDateTime.now();
         String parseLocalDateTime = localDateTime.format(DateTimeFormatter.ofPattern(
-                "yyyy-MM-dd HH:mm:ss"));
+                "yyyyMMddHHmmss"));
         Logger.getLogger("requestId는 "+parseLocalDateTime + " 와 같다.");
         return parseLocalDateTime;
     }

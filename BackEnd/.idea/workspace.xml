@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebd61c96-0b08-46c9-8e14-e7795d103dfc" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Model/DTO/Style/StyleDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/Image1Bean.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/Image1Bean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/GetRequestIdBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/GetRequestIdBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/SaveImageBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/SaveImageBean.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Controller/ImageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Service/ImageService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +53,6 @@
   </component>
   <component name="ProjectId" id="2NGvMMZgvk4vaMhPMLfU3SEN5IW" />
   <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
@@ -144,7 +141,7 @@
       <workItem from="1679303817310" duration="244000" />
       <workItem from="1685447209105" duration="3204000" />
       <workItem from="1685450514970" duration="533000" />
-      <workItem from="1685581813394" duration="3388000" />
+      <workItem from="1685581813394" duration="4280000" />
     </task>
     <servers />
   </component>

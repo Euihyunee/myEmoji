@@ -26,13 +26,10 @@ public class ImageController {
     @PostMapping("/upload")
     public String requestPhoto(@RequestPart MultipartFile imgFile) throws IOException {
         String requestId = imageService.uploadImg(imgFile);
-        String url = "http://localhost:8080/image/api/requestId";
+        String url = "http://localhost:8080/image/api/"+ requestId;
         ResponseEntity<String> res = new RestTemplate().getForEntity(url, String.class);
 
-        System.out.println(res.getBody());
-        System.out.println(res.getStatusCodeValue());
-        System.out.println(res.getStatusCode());
-        return null;
+        return res.getBody();
     }
 
     @GetMapping("/api/{requestId}")
