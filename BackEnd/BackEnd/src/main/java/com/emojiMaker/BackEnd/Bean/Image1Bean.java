@@ -16,12 +16,6 @@ import java.io.IOException;
 @Component
 public class Image1Bean {
 
-    /* TODO Image 입력 받으면
-        1. request_id 생성
-        2. img_url, status 생성
-        3. DTO 매핑
-        4. DTO에 저장
-        # DTO 정보 : request_id, img_url, img ,status */
     @Autowired
     GetRequestIdBean getRequestIdBean;
     @Autowired
@@ -33,8 +27,13 @@ public class Image1Bean {
     @Autowired
     ImageDTORepository imageDTORepository;
 
-
-    public ImageDTO exec(MultipartFile imgFile) throws IOException {
+    /* TODO Image 입력 받으면
+            1. request_id 생성
+            2. img_url, status 생성
+            3. DTO 매핑
+            4. DTO에 저장
+            # DTO 정보 : request_id, img_url, img ,status */
+    public String exec(MultipartFile imgFile) throws IOException {
 
         // TODO 1번
         String requestId = getRequestIdBean.exec();
@@ -46,6 +45,6 @@ public class Image1Bean {
         ImageDTO imageDTO = new ImageDTO(requestId, imgUrl, statusType);
         // TODO Image 저장 처리
         imageDTORepository.save(imageDTO);
-        return imageDTO;
+        return requestId;
     }
 }

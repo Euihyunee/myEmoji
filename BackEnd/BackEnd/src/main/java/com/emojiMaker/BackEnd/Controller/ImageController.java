@@ -6,13 +6,15 @@ import com.emojiMaker.BackEnd.Model.Enum.StatusType;
 import com.emojiMaker.BackEnd.Service.ImageService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 
 @RestController
-@RequestMapping("/img")
+@RequestMapping("/image")
 @CrossOrigin("*")
 public class ImageController {
 
@@ -22,10 +24,20 @@ public class ImageController {
 
 // TODO img 들어옴
     @PostMapping("/upload")
-    public String requestPhoto(MultipartFile imgFile) throws IOException {
+    public String requestPhoto(@RequestPart MultipartFile imgFile) throws IOException {
+        String requestId = imageService.uploadImg(imgFile);
+        String url = "http://localhost:8080/image/api/requestId";
+        ResponseEntity<String> res = new RestTemplate().getForEntity(url, String.class);
 
+        System.out.println(res.getBody());
+        System.out.println(res.getStatusCodeValue());
+        System.out.println(res.getStatusCode());
         return null;
-//        return imageService.uploadImg(imgFile);
+    }
+
+    @GetMapping("/api/{requestId}")
+    public String apiRequestId(@PathVariable String requestId){
+        return requestId;
     }
 
 

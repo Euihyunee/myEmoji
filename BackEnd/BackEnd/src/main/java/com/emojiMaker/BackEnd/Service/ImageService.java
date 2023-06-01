@@ -18,9 +18,8 @@ public class ImageService {
     @Autowired
     GetStatusBean getStatusBean;
 
-    public ImageDTO uploadImg(MultipartFile imgFile) throws IOException {
-        ImageDTO imageDTO = image1Bean.exec(imgFile);
-        return imageDTO;
+    public String uploadImg(MultipartFile imgFile) throws IOException {
+        return image1Bean.exec(imgFile);
     }
     public StatusType getStatus(String requestId){
         return getStatusBean.exec(requestId);
