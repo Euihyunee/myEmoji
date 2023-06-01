@@ -8,6 +8,7 @@ class BackEndApplicationTests {
 
 	@Test
 	void contextLoads() {
+		System.out.println(System.getProperty("user.dir"));
 	}
 
 }

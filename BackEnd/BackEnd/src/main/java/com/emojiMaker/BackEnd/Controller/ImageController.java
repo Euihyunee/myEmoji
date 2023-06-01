@@ -2,6 +2,7 @@ package com.emojiMaker.BackEnd.Controller;
 
 import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDTO;
 
+import com.emojiMaker.BackEnd.Model.Enum.StatusType;
 import com.emojiMaker.BackEnd.Service.ImageService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,12 +22,15 @@ public class ImageController {
 
 // TODO img 들어옴
     @PostMapping("/upload")
-    public ImageDTO requestPhoto(MultipartFile imgFile) throws IOException {
-        return imageService.uploadImg(imgFile);
+    public String requestPhoto(MultipartFile imgFile) throws IOException {
+
+        return null;
+//        return imageService.uploadImg(imgFile);
     }
 
 
     // TODO status 수정(도건Server에서 요청 들어옴)
+    // TODO input : reqyestId, {img_url, tag_name}s
     @PostMapping("/postMethod")
     public void completeRequest(@RequestBody String status){
 
@@ -34,8 +38,7 @@ public class ImageController {
 
     // TODO 결과 조회
     @GetMapping("/status/{requestId}")
-    public String getStatus(@PathVariable String requestId){
-
-        return requestId;
+    public StatusType getStatus(@PathVariable String requestId){
+        return imageService.getStatus(requestId);
     }
 }
