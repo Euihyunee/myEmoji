@@ -3,14 +3,13 @@ package com.emojiMaker.BackEnd.Bean;
 import com.emojiMaker.BackEnd.Bean.SmallBean.GetStatusBean;
 import com.emojiMaker.BackEnd.Model.DAO.StyleDAO;
 import com.emojiMaker.BackEnd.Model.DTO.Style.StyleDTO;
-import com.emojiMaker.BackEnd.Model.DTO.Style.TagDTO;
+import com.emojiMaker.BackEnd.Model.DTO.Style.StyleTagDTO;
 import com.emojiMaker.BackEnd.Model.Enum.StatusType;
 import com.emojiMaker.BackEnd.Repository.ImageDTORepository;
 import com.emojiMaker.BackEnd.Repository.StyleDAORepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Entity;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,16 +27,16 @@ public class Style3Bean {
         StatusType statusType = getStatusBean.exec(requestId);
         if (statusType == StatusType.COMPLETEIMG) {
             StyleDTO styleDTO = new StyleDTO();
-            List<TagDTO> tagDTOS = new ArrayList<>();
+            List<StyleTagDTO> styleTagDTOS = new ArrayList<>();
             styleDTO.setRequestId(requestId);
 
             List<StyleDAO> styleDAOList = styleDAORepository.findAllByRequestId(requestId);
 
             for (StyleDAO styleDAO : styleDAOList) {
-                TagDTO tagDTO = new TagDTO(styleDAO.getTagName(), styleDAO.getImgUrl());
-                tagDTOS.add(tagDTO);
+                StyleTagDTO styleTagDTO = new StyleTagDTO(styleDAO.getTagName(), styleDAO.getImgUrl());
+                styleTagDTOS.add(styleTagDTO);
             }
-            styleDTO.setStyles(tagDTOS);
+            styleDTO.setStyles(styleTagDTOS);
             return styleDTO;
         }
         return null;

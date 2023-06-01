@@ -10,5 +10,5 @@ import java.util.List;
 public class StyleDTO {
 
     private String requestId;
-    private List<TagDTO> styles;
+    private List<StyleTagDTO> styles;
 }

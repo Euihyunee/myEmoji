@@ -5,12 +5,12 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class TagDTO {
+public class StyleTagDTO {
 
     private String tagName;
     private String imgUrl;
 
-    public TagDTO(String tagName, String imgUrl) {
+    public StyleTagDTO(String tagName, String imgUrl) {
         this.tagName = tagName;
         this.imgUrl = imgUrl;
     }

@@ -5,7 +5,7 @@ import com.emojiMaker.BackEnd.Bean.SmallBean.UpdateStatusBean;
 import com.emojiMaker.BackEnd.Model.DAO.StyleDAO;
 import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDTO;
 import com.emojiMaker.BackEnd.Model.DTO.Style.StyleDTO;
-import com.emojiMaker.BackEnd.Model.DTO.Style.TagDTO;
+import com.emojiMaker.BackEnd.Model.DTO.Style.StyleTagDTO;
 import com.emojiMaker.BackEnd.Repository.ImageDTORepository;
 import com.emojiMaker.BackEnd.Repository.StyleDAORepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,12 +35,12 @@ public class Image2Bean {
     public void exec(StyleDTO styleDTO) {
 
         String requestId = styleDTO.getRequestId();
-        List<TagDTO> tagDTOS = styleDTO.getStyles();
+        List<StyleTagDTO> styleTagDTOS = styleDTO.getStyles();
         ImageDTO imageDTO = imageDTORepository.findImageDTOByRequestId(requestId);
 
         if (!StringUtils.isEmpty(imageDTO)){
             imageDTORepository.save( updateStatusBean.exec(imageDTO, 1));
-            List<StyleDAO> styleDAOS = mapStyleDAOBean.exec(requestId, tagDTOS);
+            List<StyleDAO> styleDAOS = mapStyleDAOBean.exec(requestId, styleTagDTOS);
             styleDAORepository.saveAll(styleDAOS);
         } else System.out.println("null임");
     }
