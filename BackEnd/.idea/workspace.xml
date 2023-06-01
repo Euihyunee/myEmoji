@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ebd61c96-0b08-46c9-8e14-e7795d103dfc" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/Emoji1Bean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Model/DTO/Style/ResponseTagDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/Image2Bean.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/Image2Bean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/MapStyleDAOBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/MapStyleDAOBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Controller/ImageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Controller/ImageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Model/DTO/Style/Style1DTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Model/DTO/Style/TagDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Model/DTO/Style/StyleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Model/DTO/Style/StyleDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Service/ImageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Service/ImageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/GetStatusBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/SmallBean/GetStatusBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/Style3Bean.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Bean/Style3Bean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Controller/StyleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Controller/StyleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Model/DTO/Style/TagDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Model/DTO/Style/TagDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Repository/ImageDTORepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Repository/ImageDTORepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Repository/StyleDAORepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Repository/StyleDAORepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Service/StyleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/emojiMaker/BackEnd/Service/StyleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +148,7 @@
       <workItem from="1679303817310" duration="244000" />
       <workItem from="1685447209105" duration="3204000" />
       <workItem from="1685450514970" duration="533000" />
-      <workItem from="1685581813394" duration="10254000" />
+      <workItem from="1685581813394" duration="13222000" />
     </task>
     <servers />
   </component>
