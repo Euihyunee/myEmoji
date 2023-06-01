@@ -8,5 +8,4 @@ public class StyleDTO {
 
     private String tagName;
     private String imgUrl;
-    private String requestId;
 }
