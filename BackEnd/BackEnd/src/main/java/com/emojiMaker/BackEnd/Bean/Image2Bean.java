@@ -38,7 +38,7 @@ public class Image2Bean {
         List<StyleTagDTO> styleTagDTOS = styleDTO.getStyles();
         ImageDTO imageDTO = imageDTORepository.findImageDTOByRequestId(requestId);
 
-        if (!StringUtils.isEmpty(imageDTO)){
+        if (imageDTO != null){
             imageDTORepository.save( updateStatusBean.exec(imageDTO, 1));
             List<StyleDAO> styleDAOS = mapStyleDAOBean.exec(requestId, styleTagDTOS);
             styleDAORepository.saveAll(styleDAOS);

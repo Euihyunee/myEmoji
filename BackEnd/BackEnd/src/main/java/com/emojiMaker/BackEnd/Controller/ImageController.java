@@ -41,6 +41,7 @@ public class ImageController {
     // TODO input : reqyestId, {img_url, tag_name}s
     @PostMapping("/responseTagName")
     public void completeRequest(@RequestBody StyleDTO styleDTO){
+        System.out.println(styleDTO);
         imageService.responseTagName(styleDTO);
     }
 

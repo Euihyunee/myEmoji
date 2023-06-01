@@ -7,9 +7,12 @@ import com.emojiMaker.BackEnd.Model.DTO.Request.RequestUserInputDTO;
 import com.emojiMaker.BackEnd.Model.DTO.Response.ResponseEmojiDTO;
 import com.emojiMaker.BackEnd.Model.DTO.Response.ResponseEmojiResultDTO;
 import com.emojiMaker.BackEnd.Model.DTO.Response.ResponseTagImageDTO;
+import com.emojiMaker.BackEnd.Model.DTO.Style.RequestTagDTO;
 import com.emojiMaker.BackEnd.Model.Enum.RequestType;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
@@ -21,6 +24,7 @@ import java.util.*;
 @RestController
 @CrossOrigin("*")
 public class MainController {
+
     Map<String , RequestUserInputDTO> map = new HashMap<String, RequestUserInputDTO>();
     @Autowired
     GerRequestTypeBean gerRequestTypeBean;
@@ -28,6 +32,16 @@ public class MainController {
     @GetMapping("/")
     public String  main(){
         return "나만의 이모티콘 : myEmoji";
+    }
+
+    @GetMapping("/test")
+    public String  selectTag(){
+        String url = "http://54.180.98.109:8000/test/";
+        System.out.println(url);
+        ResponseEntity<String> res = new RestTemplate().getForEntity(url, String.class);
+
+        System.out.println(res);
+        return res.getBody();
     }
 
     @GetMapping("/data")
