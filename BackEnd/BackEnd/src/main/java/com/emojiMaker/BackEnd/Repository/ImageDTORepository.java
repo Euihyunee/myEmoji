@@ -7,7 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.awt.*;
 
 public interface ImageDTORepository extends JpaRepository<ImageDTO, String> {
-
-    StatusType findByRequestId(String requestId);
     ImageDTO findImageDTOByRequestId(String requestId);
 }

@@ -1,5 +1,6 @@
 package com.emojiMaker.BackEnd.Bean.SmallBean;
 
+import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDTO;
 import com.emojiMaker.BackEnd.Model.Enum.StatusType;
 import com.emojiMaker.BackEnd.Repository.ImageDTORepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +19,7 @@ public class GetStatusBean {
         return statusType;
     }
     public StatusType exec(String requestId){
-        StatusType statusType = imageDTORepository.findByRequestId(requestId);
-
-        return statusType;
+        ImageDTO imageDTO = imageDTORepository.findImageDTOByRequestId(requestId);
+        return imageDTO.getStatus();
     }
 }

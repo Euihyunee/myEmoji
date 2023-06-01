@@ -3,7 +3,7 @@ package com.emojiMaker.BackEnd.Bean;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Style3Bean {
+public class Emoji1Bean {
 
     /* TODO Client가 완성 요청 부분
         Case1. status 미완성
