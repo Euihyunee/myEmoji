@@ -2,6 +2,7 @@ package com.emojiMaker.BackEnd.Controller;
 
 import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDTO;
 
+import com.emojiMaker.BackEnd.Model.DTO.Style.Style1DTO;
 import com.emojiMaker.BackEnd.Model.DTO.Style.StyleDTO;
 import com.emojiMaker.BackEnd.Model.Enum.StatusType;
 import com.emojiMaker.BackEnd.Service.ImageService;
@@ -42,10 +43,9 @@ public class ImageController {
 
     // TODO status 수정(도건Server에서 요청 들어옴)
     // TODO input : reqyestId, {img_url, tag_name}s
-    @PostMapping("/postMethod")
-    public void completeRequest(@RequestBody String requestId, List<StyleDTO> styleDTOList){
-
-
+    @PostMapping("/responseTagName")
+    public void completeRequest(@RequestBody Style1DTO style1DTO){
+        imageService.responseTagName(style1DTO);
     }
 
     // TODO 결과 조회

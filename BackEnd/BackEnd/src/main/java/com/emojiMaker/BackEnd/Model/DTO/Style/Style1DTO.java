@@ -1,13 +1,14 @@
 package com.emojiMaker.BackEnd.Model.DTO.Style;
 
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
+
+import java.util.List;
 
 @Data
 @NoArgsConstructor
-public class StyleDTO {
+public class Style1DTO {
 
-    private String tagName;
-    private String imgUrl;
+    private String requestId;
+    private List<StyleDTO> styles;
 }

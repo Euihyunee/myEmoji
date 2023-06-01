@@ -1,21 +1,24 @@
 package com.emojiMaker.BackEnd.Bean.SmallBean;
 
+import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDTO;
 import com.emojiMaker.BackEnd.Model.Enum.StatusType;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UpdateStatusBean {
 
     // TODO Status Update 빈
     public StatusType exec() {
         return StatusType.WAITIMG;
     }
-    public StatusType exec(StatusType status, int statusNum){
+    public ImageDTO exec(ImageDTO imageDTO, int statusNum){
         if (statusNum == 1) {
-            status = StatusType.COMPLETESTYLE;
+            imageDTO.setStatus(StatusType.COMPLETEIMG);
         } else if (statusNum == 2) {
-            status = StatusType.WAITSTYLE;
+            imageDTO.setStatus(StatusType.WAITSTYLE);
         } else if (statusNum == 3) {
-            status = StatusType.COMPLETESTYLE;
+            imageDTO.setStatus(StatusType.COMPLETESTYLE);
         }
-        return status;
+        return imageDTO;
     }
 }
