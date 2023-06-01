@@ -1,8 +1,5 @@
 package com.emojiMaker.BackEnd.Controller;
 
-import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDTO;
-
-import com.emojiMaker.BackEnd.Model.DTO.Style.Style1DTO;
 import com.emojiMaker.BackEnd.Model.DTO.Style.StyleDTO;
 import com.emojiMaker.BackEnd.Model.Enum.StatusType;
 import com.emojiMaker.BackEnd.Service.ImageService;
@@ -14,7 +11,6 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.util.List;
 
 @RestController
 @RequestMapping("/image")
@@ -44,8 +40,8 @@ public class ImageController {
     // TODO status 수정(도건Server에서 요청 들어옴)
     // TODO input : reqyestId, {img_url, tag_name}s
     @PostMapping("/responseTagName")
-    public void completeRequest(@RequestBody Style1DTO style1DTO){
-        imageService.responseTagName(style1DTO);
+    public void completeRequest(@RequestBody StyleDTO styleDTO){
+        imageService.responseTagName(styleDTO);
     }
 
     // TODO 결과 조회

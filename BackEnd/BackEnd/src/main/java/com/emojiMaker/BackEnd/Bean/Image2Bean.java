@@ -4,9 +4,8 @@ import com.emojiMaker.BackEnd.Bean.SmallBean.MapStyleDAOBean;
 import com.emojiMaker.BackEnd.Bean.SmallBean.UpdateStatusBean;
 import com.emojiMaker.BackEnd.Model.DAO.StyleDAO;
 import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDTO;
-import com.emojiMaker.BackEnd.Model.DTO.Style.Style1DTO;
 import com.emojiMaker.BackEnd.Model.DTO.Style.StyleDTO;
-import com.emojiMaker.BackEnd.Model.Enum.StatusType;
+import com.emojiMaker.BackEnd.Model.DTO.Style.TagDTO;
 import com.emojiMaker.BackEnd.Repository.ImageDTORepository;
 import com.emojiMaker.BackEnd.Repository.StyleDAORepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,15 +32,15 @@ public class Image2Bean {
     @Autowired
     UpdateStatusBean updateStatusBean;
 
-    public void exec(Style1DTO style1DTO) {
+    public void exec(StyleDTO styleDTO) {
 
-        String requestId = style1DTO.getRequestId();
-        List<StyleDTO> styleDTOS = style1DTO.getStyles();
+        String requestId = styleDTO.getRequestId();
+        List<TagDTO> tagDTOS = styleDTO.getStyles();
         ImageDTO imageDTO = imageDTORepository.findImageDTOByRequestId(requestId);
 
         if (!StringUtils.isEmpty(imageDTO)){
             imageDTORepository.save( updateStatusBean.exec(imageDTO, 1));
-            List<StyleDAO> styleDAOS = mapStyleDAOBean.exec(requestId, styleDTOS);
+            List<StyleDAO> styleDAOS = mapStyleDAOBean.exec(requestId, tagDTOS);
             styleDAORepository.saveAll(styleDAOS);
         } else System.out.println("null임");
     }
