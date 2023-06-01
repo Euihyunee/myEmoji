@@ -7,4 +7,6 @@ import java.util.List;
 
 public interface StyleDAORepository extends JpaRepository<StyleDAO, Long> {
     List<StyleDAO> findAllByRequestId(String requestId);
+    StyleDAO findStyleDAOByRequestIdAndTagName(String requestId, String tagName);
+
 }
