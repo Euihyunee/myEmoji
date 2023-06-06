@@ -1,6 +1,6 @@
 package com.emojiMaker.BackEnd.Bean.SmallBean;
 
-import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDTO;
+import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDAO;
 import com.emojiMaker.BackEnd.Model.Enum.StatusType;
 import org.springframework.stereotype.Component;
 
@@ -9,16 +9,16 @@ public class UpdateStatusBean {
 
     // TODO Status Update 빈
     public StatusType exec() {
-        return StatusType.WAITIMG;
+        return StatusType.WAITTAG;
     }
-    public ImageDTO exec(ImageDTO imageDTO, int statusNum){
+    public ImageDAO exec(ImageDAO imageDAO, int statusNum){
         if (statusNum == 1) {
-            imageDTO.setStatus(StatusType.COMPLETEIMG);
+            imageDAO.setStatus(StatusType.COMPLETETAG);
         } else if (statusNum == 2) {
-            imageDTO.setStatus(StatusType.WAITSTYLE);
+            imageDAO.setStatus(StatusType.WAITEMOJI);
         } else if (statusNum == 3) {
-            imageDTO.setStatus(StatusType.COMPLETESTYLE);
+            imageDAO.setStatus(StatusType.COMPLETEEMOJI);
         }
-        return imageDTO;
+        return imageDAO;
     }
 }

@@ -1,8 +1,8 @@
 package com.emojiMaker.BackEnd.Bean.SmallBean;
 
-import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDTO;
+import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDAO;
 import com.emojiMaker.BackEnd.Model.Enum.StatusType;
-import com.emojiMaker.BackEnd.Repository.ImageDTORepository;
+import com.emojiMaker.BackEnd.Repository.ImageDAORepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -10,16 +10,16 @@ import org.springframework.stereotype.Component;
 public class GetStatusBean {
 
     @Autowired
-    ImageDTORepository imageDTORepository;
+    ImageDAORepository imageDAORepository;
 
     // TODO Status 가져오는 빈
     public StatusType exec(){
-        StatusType statusType = StatusType.WAITIMG;
+        StatusType statusType = StatusType.WAITTAG;
 
         return statusType;
     }
     public StatusType exec(String requestId){
-        ImageDTO imageDTO = imageDTORepository.findImageDTOByRequestId(requestId);
-        return imageDTO.getStatus();
+        ImageDAO imageDAO = imageDAORepository.findImageDAOByRequestId(requestId);
+        return imageDAO.getStatus();
     }
 }

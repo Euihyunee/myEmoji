@@ -3,10 +3,10 @@ package com.emojiMaker.BackEnd.Bean;
 import com.emojiMaker.BackEnd.Bean.SmallBean.MapEmojiDAOBean;
 import com.emojiMaker.BackEnd.Bean.SmallBean.UpdateStatusBean;
 import com.emojiMaker.BackEnd.Model.DAO.EmojiDAO;
-import com.emojiMaker.BackEnd.Model.DTO.EmojiDTO.EmojiDTO;
-import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDTO;
+import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDAO;
+import com.emojiMaker.BackEnd.Model.DTO.newDTO.ListResponseEmojiDTO;
 import com.emojiMaker.BackEnd.Repository.EmojiDAORepository;
-import com.emojiMaker.BackEnd.Repository.ImageDTORepository;
+import com.emojiMaker.BackEnd.Repository.ImageDAORepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -16,7 +16,7 @@ import java.util.List;
 public class Emoji1Bean {
 
     @Autowired
-    ImageDTORepository imageDTORepository;
+    ImageDAORepository imageDAORepository;
     @Autowired
     UpdateStatusBean updateStatusBean;
     @Autowired
@@ -24,13 +24,13 @@ public class Emoji1Bean {
     @Autowired
     EmojiDAORepository emojiDAORepository;
 
-    public void exec(EmojiDTO emojiDTO){
+    public void exec(ListResponseEmojiDTO listResponseEmojiDTO){
         //TODO Status 변경
-        String requestId = emojiDTO.getRequestId();
-        String tagName = emojiDTO.getTagName();
-        ImageDTO imageDTO = imageDTORepository.findImageDTOByRequestId(requestId);
-        imageDTORepository.save(updateStatusBean.exec(imageDTO, 3));
-        List<EmojiDAO> emojiDAOList = mapEmojiDAOBean.exec(requestId, tagName, emojiDTO.getEmojiImgDTOS());
+        String requestId = listResponseEmojiDTO.getResponseEmojiDTOS().get(0).getRequestId();
+        String tagName = listResponseEmojiDTO.getResponseEmojiDTOS().get(0).getTagName();
+        ImageDAO imageDAO = imageDAORepository.findImageDAOByRequestId(requestId);
+        imageDAORepository.save(updateStatusBean.exec(imageDAO, 3));
+        List<EmojiDAO> emojiDAOList = mapEmojiDAOBean.exec(requestId, tagName, listResponseEmojiDTO.getResponseEmojiDTOS());
 
         emojiDAORepository.saveAll(emojiDAOList);
     }

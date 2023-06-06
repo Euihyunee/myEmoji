@@ -12,7 +12,7 @@ public class ImgDAO {
 
     private String imgUrl;
 
-//    private Image img;
+    private String imgName;
 
     @Enumerated(EnumType.STRING)
     private StatusType status;

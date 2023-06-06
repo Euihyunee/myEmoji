@@ -1,7 +1,7 @@
 package com.emojiMaker.BackEnd.Bean.SmallBean;
 
 import com.emojiMaker.BackEnd.Model.DAO.EmojiDAO;
-import com.emojiMaker.BackEnd.Model.DTO.EmojiDTO.EmojiImgDTO;
+import com.emojiMaker.BackEnd.Model.DTO.newDTO.ResponseEmojiDTO;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -10,13 +10,15 @@ import java.util.List;
 @Component
 public class MapEmojiDAOBean {
 
-    public List<EmojiDAO> exec(String requestId, String tagName, List<EmojiImgDTO> emojiImgDTOS) {
+    public List<EmojiDAO> exec(String requestId, String tagName, List<ResponseEmojiDTO> responseEmojiDTOS) {
 
         List<EmojiDAO> emojiDAOS = new ArrayList<>();
-        for (EmojiImgDTO emojiImgDTO : emojiImgDTOS) {
-            EmojiDAO emojiDAO = new EmojiDAO(requestId, tagName, emojiImgDTO.getEmojiUrl(), emojiImgDTO.getEmojiTag());
+        for (ResponseEmojiDTO responseEmojiDTO : responseEmojiDTOS) {
+            EmojiDAO emojiDAO = new EmojiDAO(requestId, tagName, responseEmojiDTO.getEmojiUrl(), responseEmojiDTO.getEmojiTag(), responseEmojiDTO.getSetNum());
+
             emojiDAOS.add(emojiDAO);
         }
+        System.out.println(emojiDAOS);
         return emojiDAOS;
     }
 }

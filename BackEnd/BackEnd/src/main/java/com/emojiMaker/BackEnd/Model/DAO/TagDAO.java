@@ -8,24 +8,21 @@ import javax.persistence.Id;
 
 @Entity
 @Getter
-public class EmojiDAO {
+public class TagDAO {
 
-    @Id
-    @GeneratedValue
-    private Long id;
+    @Id @GeneratedValue
+    private long id;
     private String requestId;
     private String tagName;
-    private String emojiUrl;
-    private String emojiTag;
+    private String tagUrl;
     private int setNum;
-
-
-    public EmojiDAO() {}
-    public EmojiDAO(String requestId, String tagName, String emojiUrl, String emojiTag, int setNum) {
+    public TagDAO(String requestId, String tagName, String tagUrl, int setNum) {
         this.requestId = requestId;
         this.tagName = tagName;
-        this.emojiUrl = emojiUrl;
-        this.emojiTag = emojiTag;
+        this.tagUrl = tagUrl;
         this.setNum = setNum;
+    }
+    public TagDAO() {
+
     }
 }
