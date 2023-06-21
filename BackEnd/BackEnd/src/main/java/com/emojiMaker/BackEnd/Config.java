@@ -7,10 +7,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class Config implements WebMvcConfigurer {
 
-    private String userDir = System.getProperty("user.dir");
     private String connectPath = "/imagePath/**";
     private String resourcePath = "file:///home/ec2-user/img/";
-    private String localPath = "file://D:/git_source/myemoji/BackEnd/img";
+    private String localPath = "file:///D:/etc/BackEnd/img/";
     @Override
     public void addResourceHandlers(final ResourceHandlerRegistry registry) {
         registry.addResourceHandler(connectPath)

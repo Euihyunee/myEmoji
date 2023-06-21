@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:mariadb://myemoji.cp4filjorlx3.ap-northeast-2.rds.amazonaws.com/myemoji
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: root
+    password: myemoji23
+  jpa:
+    open-in-view: false
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+
+oauth2:
+  google:
+    client-id: 229700534077-dqqd2cqcn8kbrns4gc5egrn0d17o41c8.apps.googleusercontent.com
+    client-secret: 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
+    redirect-uri: http://ec2-3-39-22-13.ap-northeast-2.compute.amazonaws.com:8080/login/oauth2/code/google
+    token-uri: https://oauth2.googleapis.com/token
+    resource-uri: https://www.googleapis.com/oauth2/v2/userinfo

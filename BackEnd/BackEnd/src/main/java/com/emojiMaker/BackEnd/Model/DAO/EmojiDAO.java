@@ -13,6 +13,7 @@ public class EmojiDAO {
     @Id
     @GeneratedValue
     private Long id;
+    private String emojiRequestId;
     private String requestId;
     private String tagName;
     private String emojiUrl;
@@ -21,7 +22,9 @@ public class EmojiDAO {
 
 
     public EmojiDAO() {}
-    public EmojiDAO(String requestId, String tagName, String emojiUrl, String emojiTag, int setNum) {
+    public EmojiDAO(String emojiRequestId,
+                    String requestId, String tagName, String emojiUrl, String emojiTag, int setNum) {
+        this.emojiRequestId = emojiRequestId;
         this.requestId = requestId;
         this.tagName = tagName;
         this.emojiUrl = emojiUrl;

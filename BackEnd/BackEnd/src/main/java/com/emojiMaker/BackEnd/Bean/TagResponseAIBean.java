@@ -44,6 +44,7 @@ public class TagResponseAIBean {
 
 
         if (!StringUtils.isEmpty(imageDAO)){
+            imageDAO.setWait(100);
             imageDAORepository.save( updateStatusBean.exec(imageDAO, 1));
             List<TagDAO> tagDAOS = mapStyleDAOBean.exec(requestId, responseTagDTOS);
             tagDAORepository.saveAll(tagDAOS);

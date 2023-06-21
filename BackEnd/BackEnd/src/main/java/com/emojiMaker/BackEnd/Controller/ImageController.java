@@ -2,6 +2,7 @@ package com.emojiMaker.BackEnd.Controller;
 
 import com.emojiMaker.BackEnd.Model.DTO.newDTO.RequestTagDTO;
 import com.emojiMaker.BackEnd.Model.UrlMakeClass;
+import com.emojiMaker.BackEnd.Repository.ImageDAORepository;
 import com.emojiMaker.BackEnd.Service.ImageService;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,21 +21,18 @@ public class ImageController {
 
     @Autowired
     ImageService imageService;
-    UrlMakeClass urlMakeClass = new UrlMakeClass();
+    @Autowired
+    ImageDAORepository imageDAORepository;
+
 
 // TODO img 들어옴
     @PostMapping("/upload")
-    public String requestPhoto(@RequestPart MultipartFile imgFile) throws IOException {
+    public String requestPhoto(@RequestPart MultipartFile imgFile,
+                               @RequestParam String userId) throws IOException {
+        System.out.println(userId);
+        // TODO 빠른 시간 요청 막기
         // TODO 파일명, requestId 필요함
-        RequestTagDTO requestTagDTO = imageService.uploadImg(imgFile);
-        // TODO Tag 요청 URL : Get방식, /{requestId}/{imgName}
-        String url = urlMakeClass.getAiUrl()+"tag/"+requestTagDTO.getRequestId()+"/"+requestTagDTO.getImgName();
-        // TODO Tag 요청한 반환값
-        ResponseEntity<String> res = new RestTemplate().getForEntity(url, String.class);
-        if (!Objects.equals(res.getBody(), "success")){
-            return "fail";
-        }
-        return requestTagDTO.getRequestId();
+        return imageService.uploadImg(imgFile, userId);
     }
 
     @GetMapping("/api/{requestId}")

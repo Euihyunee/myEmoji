@@ -14,5 +14,6 @@ public class RequestClientTagDTO {
 
     private String requestId;
     private StatusType status;
+    private int wait;
     private List<TagDTO> tagDTOS;
 }

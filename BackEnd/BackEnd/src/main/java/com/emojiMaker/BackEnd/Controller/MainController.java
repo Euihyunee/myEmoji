@@ -1,17 +1,74 @@
 package com.emojiMaker.BackEnd.Controller;
 
+import com.emojiMaker.BackEnd.Bean.TestGetImage;
+import com.emojiMaker.BackEnd.Model.DAO.ImageDAO;
+import com.emojiMaker.BackEnd.Repository.ImageDAORepository;
+import com.google.zxing.BarcodeFormat;
+import com.google.zxing.MultiFormatWriter;
+import com.google.zxing.WriterException;
+import com.google.zxing.client.j2se.MatrixToImageWriter;
+import com.google.zxing.common.BitMatrix;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.io.*;
 
 @RestController
 @CrossOrigin("*")
 public class MainController {
-//    Map<String , RequestUserInputDTO> map = new HashMap<String, RequestUserInputDTO>();
+    //    Map<String , RequestUserInputDTO> map = new HashMap<String, RequestUserInputDTO>();
 //    @Autowired
 //    GerRequestTypeBean gerRequestTypeBean;
 //
+    @Autowired
+    ImageDAORepository imageDAORepository;
+    @Autowired
+    TestGetImage testGetImage;
+
+
     @GetMapping("/")
     public String  main(){
         return "나만의 이모티콘 : myEmoji";
+    }
+
+    //TODO QR 생성
+    @GetMapping(value = {"/qrCode/{imgName}"})
+    public Object createQr(@PathVariable String imgName) throws WriterException, IOException {
+        int width = 200;
+        int height = 200;
+        ImageDAO imageDAO = imageDAORepository.findByImgName(imgName);
+        String url = imageDAO.getImgUrl();
+        BitMatrix matrix = new MultiFormatWriter().encode(url, BarcodeFormat.QR_CODE, width, height);
+
+        try (ByteArrayOutputStream out = new ByteArrayOutputStream();) {
+            MatrixToImageWriter.writeToStream(matrix, "PNG", out);
+            return ResponseEntity.ok()
+                    .contentType(MediaType.IMAGE_PNG)
+                    .body(out.toByteArray());
+        }
+    }
+
+    // TODO 이미지 url로 다운로드
+    @GetMapping("/down/")
+    public void downImg() {
+        TestGetImage testGetImage = new TestGetImage();
+        String strUrl = "https://www.gstatic.com/webp/gallery/1.sm.jpg"; //불러올 URL
+        try {
+            testGetImage.saveImage(strUrl);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    // TODO select local 용
+    @GetMapping("/stable/{requestId}/{emojiRequestId}/{imgName}/{tagName}/{setNum}")
+    public String selectTest(@PathVariable String requestId,
+                             @PathVariable String emojiRequestId,
+                             @PathVariable String tagName,
+                             @PathVariable int setNum) {
+        return "success";
     }
 //
 //    @GetMapping("/data")

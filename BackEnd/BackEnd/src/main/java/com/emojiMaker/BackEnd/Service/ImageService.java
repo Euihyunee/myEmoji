@@ -26,13 +26,9 @@ public class ImageService {
     @Autowired
     ImageDAORepository imageDAORepository;
 
-    public RequestTagDTO uploadImg(MultipartFile imgFile) throws IOException {
-        return image1Bean.exec(imgFile);
+    public String uploadImg(MultipartFile imgFile, String userId) throws IOException {
+        return image1Bean.exec(imgFile, userId);
     }
-    public StatusType getStatus(String requestId){
-        return getStatusBean.exec(requestId);
-    }
-
     public void responseTag(ListResponseTagDTO listResponseTagDTO) {
         tagResponseAIBean.exec(listResponseTagDTO);
     }

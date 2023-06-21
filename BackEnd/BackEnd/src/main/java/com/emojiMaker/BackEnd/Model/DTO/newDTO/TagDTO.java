@@ -12,7 +12,6 @@ public class TagDTO {
         this.tagUrl = tagUrl;
         this.setNum = setNum;
     }
-
     private String tagName;
     private String tagUrl;
     private int setNum;

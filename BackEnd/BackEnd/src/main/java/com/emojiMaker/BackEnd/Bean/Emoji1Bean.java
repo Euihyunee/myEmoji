@@ -28,9 +28,13 @@ public class Emoji1Bean {
         //TODO Status 변경
         String requestId = listResponseEmojiDTO.getResponseEmojiDTOS().get(0).getRequestId();
         String tagName = listResponseEmojiDTO.getResponseEmojiDTOS().get(0).getTagName();
+        String emojiRequestId = listResponseEmojiDTO.getResponseEmojiDTOS().get(0).getEmojiRequestId();
         ImageDAO imageDAO = imageDAORepository.findImageDAOByRequestId(requestId);
+        imageDAO.setWait(100);
         imageDAORepository.save(updateStatusBean.exec(imageDAO, 3));
-        List<EmojiDAO> emojiDAOList = mapEmojiDAOBean.exec(requestId, tagName, listResponseEmojiDTO.getResponseEmojiDTOS());
+        List<EmojiDAO> emojiDAOList = mapEmojiDAOBean.exec(
+                emojiRequestId,requestId, tagName,
+                listResponseEmojiDTO.getResponseEmojiDTOS());
 
         emojiDAORepository.saveAll(emojiDAOList);
     }

@@ -9,4 +9,5 @@ public class RequestUrlEmojiDTO {
 
     private String imgName;
     private int setNum;
+    private String emojiRequestId;
 }

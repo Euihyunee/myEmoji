@@ -13,8 +13,10 @@ import java.util.List;
 public class RequestClientEmojiDTO {
 
     private String requestId;
+    private String emojiRequestId;
     private String tagName;
     private StatusType status;
+    private int wait;
 
     private List<EmojiDTO> emojiDTOS;
 }

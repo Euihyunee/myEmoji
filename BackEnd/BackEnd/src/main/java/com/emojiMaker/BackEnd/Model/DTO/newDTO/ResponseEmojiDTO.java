@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ResponseEmojiDTO {
 
+    private String emojiRequestId;
     private String requestId;
     private String tagName;
     private String emojiTag;

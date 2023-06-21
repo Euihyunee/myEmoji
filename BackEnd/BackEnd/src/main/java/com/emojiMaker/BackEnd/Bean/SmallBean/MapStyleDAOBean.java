@@ -15,17 +15,10 @@ public class MapStyleDAOBean {
 
         List<TagDAO> tagDAOS = new ArrayList<>();
         for(ResponseTagDTO responseTagDTO : responseTagDTOS){
-            String tagName = "";
-            if(Objects.equals(responseTagDTO.getTagName(), "gogh painting style")){
-                tagName = "gogh";
-            } else if (Objects.equals(responseTagDTO.getTagName(), "cartoon style")) {
-                tagName = "cartoon";
-            } else if (Objects.equals(responseTagDTO.getTagName(), "sketch")){
-                tagName = "sketch";
-            }
+
 
             TagDAO tagDAO = new TagDAO(requestId,
-                    tagName,
+                    responseTagDTO.getTagName(),
                     responseTagDTO.getTagUrl(),
                     responseTagDTO.getSetNum());
             tagDAOS.add(tagDAO);
