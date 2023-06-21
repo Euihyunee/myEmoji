@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.view.RedirectView;
 
 import java.io.*;
 
@@ -29,7 +30,7 @@ public class MainController {
 
 
     @GetMapping("/")
-    public String  main(){
+    public String main() {
         return "나만의 이모티콘 : myEmoji";
     }
 
@@ -70,6 +71,33 @@ public class MainController {
                              @PathVariable int setNum) {
         return "success";
     }
+
+    @RequestMapping("/test/redirect")
+    public String testRedirect(@RequestHeader String header) {
+        System.out.println(header);
+        return header;
+    }
+
+    @RequestMapping("/test/redirect4")
+    public RedirectView exRedirect4() {
+        RedirectView redirectView = new RedirectView();
+        redirectView.setUrl("http://www.naver.com");
+        return redirectView;
+    }
+
+    @RequestMapping("/test/redirect5")
+    public String exRedirect5() {
+        return "redirect:http://stackoverflow.com";
+    }
+
+    @GetMapping("/test/redirect6/{userId}")
+    public void exRedirect6(@PathVariable String userId,
+                            @RequestHeader (value = "Google-AccessToken-Header") String header) {
+        System.out.println(userId);
+        System.out.println(header);
+    }
+
+
 //
 //    @GetMapping("/data")
 //    public String data(){
@@ -527,7 +555,6 @@ public class MainController {
 //        return responseEmojiResultDTO;
 //
 //    }
-
 
 
 }

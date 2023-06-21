@@ -12,4 +12,6 @@ public interface ImageDAORepository extends JpaRepository<ImageDAO, String> {
 
     List<ImageDAO> findAllByUserId(String userId);
 
+    boolean existsImageDAOByUserId(String userId);
+
 }

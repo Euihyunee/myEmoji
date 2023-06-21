@@ -10,6 +10,7 @@ public class UrlMakeClass {
 
     public UrlMakeClass() {
         this.myUrl = "http://3.39.22.13:8080/";
+//        this.myUrl = "http://localhost:8080/";
         this.AiUrl = "http://13.114.204.13:8000/";
     }
 }
