@@ -50,10 +50,12 @@ public class TagController {
     }
 
     // TODO client한테서 request_id, tag_name 들어옴 return emojiRequestId
-    @GetMapping("/select/{requestId}/{tagName}/{setNum}")
-    public String selectTag(@PathVariable String requestId, @PathVariable String tagName,
+    @GetMapping("/select/{userId}/{requestId}/{tagName}/{setNum}")
+    public String selectTag(@PathVariable String userId,
+                            @PathVariable String requestId,
+                            @PathVariable String tagName,
                             @PathVariable int setNum){
-        RequestUrlEmojiDTO requestUrlEmojiDTO = tagService.exec1(requestId, tagName, setNum);
+        RequestUrlEmojiDTO requestUrlEmojiDTO = tagService.exec1(userId, requestId, tagName, setNum);
         String url = urlMakeClass.getAiUrl()+"stable/"+requestId+"/"
                 + requestUrlEmojiDTO.getEmojiRequestId() + "/"
                 + requestUrlEmojiDTO.getImgName() +"/"+tagName;

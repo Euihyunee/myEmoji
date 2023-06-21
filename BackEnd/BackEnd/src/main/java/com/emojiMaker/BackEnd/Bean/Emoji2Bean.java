@@ -41,6 +41,7 @@ public class Emoji2Bean {
                 EmojiDTO emojiDTO = new EmojiDTO(emojiDAO.getEmojiTag(), emojiDAO.getEmojiUrl(), emojiDAO.getSetNum());
                 emojiDTOS.add(emojiDTO);
             }
+            requestClientEmojiDTO.setEmojiDTOS(emojiDTOS);
         }
 //        ImageDAO imageDAO = imageDAORepository.findImageDAOByRequestId(emojiRequestId);
 //        System.out.println(imageDAO);

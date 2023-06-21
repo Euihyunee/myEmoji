@@ -13,6 +13,9 @@ import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
+
 @Service
 @Slf4j
 public class LoginService {
@@ -32,7 +35,6 @@ public class LoginService {
         System.out.println(userResourceNode.get("id"));
         System.out.println("accessToken : " + accessToken);
         System.out.println("userResourceNode : " + userResourceNode);
-
 
         UserDAO userDAO = new UserDAO(userResourceNode.get("id").asText(),
                 userResourceNode.get("email").asText(),

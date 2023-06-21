@@ -1,9 +1,7 @@
 package com.emojiMaker.BackEnd.Bean.SmallBean;
 
 import com.emojiMaker.BackEnd.Model.DAO.ImageDAO;
-import com.emojiMaker.BackEnd.Model.DAO.UserDAO;
 import com.emojiMaker.BackEnd.Repository.ImageDAORepository;
-import com.emojiMaker.BackEnd.Repository.UserDAORepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -11,7 +9,7 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 
 @Component
-public class AuditingBean {
+public class TagAuditingBean {
 
     @Autowired
     ImageDAORepository imageDAORepository;

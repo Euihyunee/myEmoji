@@ -11,19 +11,21 @@ import javax.persistence.Id;
 
 @Entity
 @Getter @Setter
-public class RequestEmojiDAO {
+public class RequestEmojiDAO extends BaseTimeEntity {
 
     @Id
     private String emojiRequestId;
     private String requestId;
+    private String userId;
     private int wait;
     @Enumerated(EnumType.STRING)
     private StatusType statusType;
     private String tagName;
     private int setNum;
 
-    public RequestEmojiDAO(String requestId, StatusType statusType, String tagName, int setNum) {
+    public RequestEmojiDAO(String requestId, String userId, StatusType statusType, String tagName, int setNum) {
         this.emojiRequestId = requestId + tagName + setNum;
+        this.userId = userId;
         this.requestId = requestId;
         this.wait = 0;
         this.statusType = statusType;

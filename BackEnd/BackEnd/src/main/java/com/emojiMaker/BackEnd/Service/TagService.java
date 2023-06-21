@@ -21,8 +21,8 @@ public class TagService {
     @Autowired
     Tag2Bean tag2Bean;
 
-    public RequestUrlEmojiDTO exec1(String requestId, String tagName, int setNum){
-        RequestUrlEmojiDTO requestUrlEmojiDTO = tag1Bean.exec(requestId, tagName, setNum);
+    public RequestUrlEmojiDTO exec1(String userId, String requestId, String tagName, int setNum){
+        RequestUrlEmojiDTO requestUrlEmojiDTO = tag1Bean.exec(userId, requestId, tagName, setNum);
         return requestUrlEmojiDTO;
     }
 

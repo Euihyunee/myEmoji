@@ -14,7 +14,8 @@ public class MapEmojiDAOBean {
 
         List<EmojiDAO> emojiDAOS = new ArrayList<>();
         for (ResponseEmojiDTO responseEmojiDTO : responseEmojiDTOS) {
-            EmojiDAO emojiDAO = new EmojiDAO(emojiRequestId,
+            EmojiDAO emojiDAO = new EmojiDAO(
+                    emojiRequestId,
                     requestId,
                     tagName,
                     responseEmojiDTO.getEmojiUrl(),

@@ -28,14 +28,14 @@ public class Tag1Bean {
     @Autowired
     RequestEmojiDAORepository requestEmojiDAORepository;
 
-    public RequestUrlEmojiDTO exec(String requestId, String tagName, int setNum){
+    public RequestUrlEmojiDTO exec(String userId, String requestId, String tagName, int setNum){
         TagDAO tagDAO = tagDAORepository.findByRequestIdAndTagNameAndSetNum(
                 requestId, tagName, setNum);
         RequestUrlEmojiDTO requestUrlEmojiDTO = new RequestUrlEmojiDTO();
         if (tagDAO != null) {
             ImageDAO imageDAO = imageDAORepository.findImageDAOByRequestId(requestId);
             imageDAORepository.save(updateStatusBean.exec(imageDAO, 2));
-            RequestEmojiDAO requestEmojiDAO = new RequestEmojiDAO(requestId,
+            RequestEmojiDAO requestEmojiDAO = new RequestEmojiDAO(requestId, userId,
                     StatusType.WAITEMOJI, tagName, setNum);
             System.out.println("RequestEmojiDAO : " + requestEmojiDAO);
             requestEmojiDAORepository.save(requestEmojiDAO);

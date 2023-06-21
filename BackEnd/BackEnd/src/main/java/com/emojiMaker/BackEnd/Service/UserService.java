@@ -5,6 +5,8 @@ import com.emojiMaker.BackEnd.Model.DAO.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserService {
 
@@ -18,6 +20,8 @@ public class UserService {
     User4Bean user4Bean;
     @Autowired
     User5Bean user5Bean;
+    @Autowired
+    historyUserBean historyUserBean;
 
     public Object info(String userId) {
         return user1Bean.exec(userId);
@@ -36,5 +40,9 @@ public class UserService {
 
     public UserDAO changeNickname(String userId, String nickname){
         return user5Bean.exec(userId, nickname);
+    }
+
+    public List<String> historyUser(String userId) {
+        return historyUserBean.exec(userId);
     }
 }

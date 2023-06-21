@@ -31,7 +31,8 @@ public class LoginController {
 //                .body(userDAO.getUserId());
 //    }
 
-        URI uri = new URI("http://192.168.35.134:5173/user/" + userDAO.getUserId() + "/" + userDAO.getAccessToken());
+        URI uri = new URI("http://192.168.35.134:5173/login/" +"?userId=" +userDAO.getUserId() +
+                "&accessToken=" + userDAO.getAccessToken());
         responseHeaders.setLocation(uri);
         return new ResponseEntity<>(responseHeaders, HttpStatus.SEE_OTHER);
     }

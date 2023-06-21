@@ -26,6 +26,9 @@ dependencies {
 	implementation 'com.google.zxing:core:3.5.1'
 // https://mvnrepository.com/artifact/com.google.zxing/javase
 	implementation 'com.google.zxing:javase:3.5.1'
+	// https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core
+	implementation 'com.fasterxml.jackson.core:jackson-core:2.14.2'
+
 
 
 }

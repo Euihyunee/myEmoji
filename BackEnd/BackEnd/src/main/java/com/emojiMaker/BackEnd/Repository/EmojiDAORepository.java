@@ -9,4 +9,6 @@ public interface EmojiDAORepository extends JpaRepository<EmojiDAO, Long> {
 
     List<EmojiDAO> findAllByRequestId(String requestId);
 
+    List<EmojiDAO> findAllByEmojiRequestId(String emojiRequestId);
+
 }

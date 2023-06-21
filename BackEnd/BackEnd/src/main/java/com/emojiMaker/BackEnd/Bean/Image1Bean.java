@@ -2,7 +2,6 @@ package com.emojiMaker.BackEnd.Bean;
 
 import com.emojiMaker.BackEnd.Bean.SmallBean.*;
 import com.emojiMaker.BackEnd.Model.DAO.ImageDAO;
-import com.emojiMaker.BackEnd.Model.DTO.newDTO.RequestTagDTO;
 import com.emojiMaker.BackEnd.Model.Enum.StatusType;
 import com.emojiMaker.BackEnd.Model.UrlMakeClass;
 import com.emojiMaker.BackEnd.Repository.ImageDAORepository;
@@ -29,7 +28,7 @@ public class Image1Bean {
     @Autowired
     ImageDAORepository imageDAORepository;
     @Autowired
-    AuditingBean auditingBean;
+    TagAuditingBean tagAuditingBean;
 
     UrlMakeClass urlMakeClass = new UrlMakeClass();
 
@@ -41,7 +40,7 @@ public class Image1Bean {
             # DTO 정보 : request_id, img_url, img ,status */
     public String exec(MultipartFile imgFile, String userId) throws IOException {
 
-        if (auditingBean.exec(userId)) {
+        if (tagAuditingBean.exec(userId)) {
             // TODO requestId 만들기
             String requestId = getRequestIdBean.exec();
             // TODO 파일 저장하고 이름 가져오기
