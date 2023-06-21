@@ -5,6 +5,7 @@ import com.emojiMaker.BackEnd.Model.UrlMakeClass;
 import com.emojiMaker.BackEnd.Repository.ImageDAORepository;
 import com.emojiMaker.BackEnd.Service.ImageService;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,6 +18,7 @@ import java.util.Objects;
 @RestController
 @RequestMapping("/image")
 @CrossOrigin("*")
+@Slf4j
 public class ImageController {
 
     @Autowired
@@ -29,9 +31,9 @@ public class ImageController {
     @PostMapping("/upload")
     public String requestPhoto(@RequestPart MultipartFile imgFile,
                                @RequestParam String userId) throws IOException {
-        System.out.println(userId);
         // TODO 빠른 시간 요청 막기
         // TODO 파일명, requestId 필요함
+        log.info("입력된 사용자 ID : " + userId + "\nFile명 : " + imgFile.getName());
         return imageService.uploadImg(imgFile, userId);
     }
 

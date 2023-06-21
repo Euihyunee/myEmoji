@@ -29,18 +29,12 @@ public class LoginService {
     }
 
     public UserDAO socialLogin(String code, String registrationId) {
-        log.info("======================================================");
+        log.info("구글 AccessToken 발급");
         String accessToken = getAccessToken(code, registrationId);
+        log.info("구글 AccessToken 유저 정보 요청");
         JsonNode userResourceNode = getUserResource(accessToken, registrationId);
-        System.out.println(userResourceNode.get("id"));
-        System.out.println("accessToken : " + accessToken);
-        System.out.println("userResourceNode : " + userResourceNode);
 
-        UserDAO userDAO = new UserDAO(userResourceNode.get("id").asText(),
-                userResourceNode.get("email").asText(),
-                userResourceNode.get("picture").asText(),
-                accessToken);
-        userDAORepository.save(userDAO);
+
 
 
 
@@ -66,10 +60,19 @@ public class LoginService {
                 throw new RuntimeException("UNSUPPORTED SOCIAL TYPE");
             }
         }
-        log.info("id = {}", userResource.getId());
-        log.info("email = {}", userResource.getEmail());
-        log.info("picture {}", userResource.getPicture());
-        log.info("======================================================");
+
+
+        log.info("유저 정보 엔티티(UserDAO) 생성");
+        UserDAO userDAO = new UserDAO(userResourceNode.get("id").asText(),
+                userResourceNode.get("email").asText(),
+                userResourceNode.get("picture").asText(),
+                accessToken);
+        log.info("유저ID = {}", userResource.getId());
+        log.info("이메일 = {}", userResource.getEmail());
+        log.info("프로필 {}", userResource.getPicture());
+
+        log.info("유저 정보 엔티티(UserDAO) 저장");
+        userDAORepository.save(userDAO);
         return userDAO;
     }
 

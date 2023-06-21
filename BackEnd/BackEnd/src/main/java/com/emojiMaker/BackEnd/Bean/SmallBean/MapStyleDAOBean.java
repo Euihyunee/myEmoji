@@ -15,8 +15,6 @@ public class MapStyleDAOBean {
 
         List<TagDAO> tagDAOS = new ArrayList<>();
         for(ResponseTagDTO responseTagDTO : responseTagDTOS){
-
-
             TagDAO tagDAO = new TagDAO(requestId,
                     responseTagDTO.getTagName(),
                     responseTagDTO.getTagUrl(),

@@ -6,10 +6,12 @@ import com.emojiMaker.BackEnd.Bean.Tag3Bean;
 import com.emojiMaker.BackEnd.Bean.testTagBean;
 import com.emojiMaker.BackEnd.Model.DTO.newDTO.RequestClientTagDTO;
 import com.emojiMaker.BackEnd.Model.DTO.newDTO.RequestUrlEmojiDTO;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class TagService {
 
     @Autowired
@@ -30,11 +32,8 @@ public class TagService {
         return tag3Bean.exec(requestId);
     }
 
-    public void testTagBean(String requestId, int wait){
-        testTagBean.exec(requestId, wait);
-    }
-
     public void saveTagLoading(int wait, String requestId) {
+        log.info("로딩 데이터 ImageDAO에 UPDATE");
         tag2Bean.exec(wait, requestId);
     }
 }
