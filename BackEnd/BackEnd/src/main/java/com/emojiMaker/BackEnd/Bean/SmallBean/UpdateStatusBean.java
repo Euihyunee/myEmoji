@@ -1,6 +1,6 @@
 package com.emojiMaker.BackEnd.Bean.SmallBean;
 
-import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDAO;
+import com.emojiMaker.BackEnd.Model.DAO.ImageDAO;
 import com.emojiMaker.BackEnd.Model.Enum.StatusType;
 import org.springframework.stereotype.Component;
 

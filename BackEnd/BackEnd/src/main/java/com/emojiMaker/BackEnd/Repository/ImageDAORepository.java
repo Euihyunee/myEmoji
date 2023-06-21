@@ -1,6 +1,6 @@
 package com.emojiMaker.BackEnd.Repository;
 
-import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDAO;
+import com.emojiMaker.BackEnd.Model.DAO.ImageDAO;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface ImageDAORepository extends JpaRepository<ImageDAO, String> {

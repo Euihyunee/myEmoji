@@ -3,7 +3,7 @@ package com.emojiMaker.BackEnd.Bean;
 import com.emojiMaker.BackEnd.Bean.SmallBean.MapEmojiDAOBean;
 import com.emojiMaker.BackEnd.Bean.SmallBean.UpdateStatusBean;
 import com.emojiMaker.BackEnd.Model.DAO.EmojiDAO;
-import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDAO;
+import com.emojiMaker.BackEnd.Model.DAO.ImageDAO;
 import com.emojiMaker.BackEnd.Model.DTO.newDTO.ListResponseEmojiDTO;
 import com.emojiMaker.BackEnd.Repository.EmojiDAORepository;
 import com.emojiMaker.BackEnd.Repository.ImageDAORepository;

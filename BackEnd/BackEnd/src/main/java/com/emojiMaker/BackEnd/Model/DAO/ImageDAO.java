@@ -1,4 +1,4 @@
-package com.emojiMaker.BackEnd.Model.DTO.Image;
+package com.emojiMaker.BackEnd.Model.DAO;
 
 import com.emojiMaker.BackEnd.Model.Enum.StatusType;
 import lombok.Getter;

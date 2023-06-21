@@ -4,7 +4,7 @@ import com.emojiMaker.BackEnd.Bean.SmallBean.GetImgUrlBean;
 import com.emojiMaker.BackEnd.Bean.SmallBean.GetRequestIdBean;
 import com.emojiMaker.BackEnd.Bean.SmallBean.GetStatusBean;
 import com.emojiMaker.BackEnd.Bean.SmallBean.SaveImageBean;
-import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDAO;
+import com.emojiMaker.BackEnd.Model.DAO.ImageDAO;
 import com.emojiMaker.BackEnd.Model.DTO.newDTO.RequestTagDTO;
 import com.emojiMaker.BackEnd.Model.Enum.StatusType;
 import com.emojiMaker.BackEnd.Repository.ImageDAORepository;

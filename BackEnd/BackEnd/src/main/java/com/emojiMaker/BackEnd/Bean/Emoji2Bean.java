@@ -1,7 +1,7 @@
 package com.emojiMaker.BackEnd.Bean;
 
 import com.emojiMaker.BackEnd.Model.DAO.EmojiDAO;
-import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDAO;
+import com.emojiMaker.BackEnd.Model.DAO.ImageDAO;
 import com.emojiMaker.BackEnd.Model.DTO.newDTO.EmojiDTO;
 import com.emojiMaker.BackEnd.Model.DTO.newDTO.RequestClientEmojiDTO;
 import com.emojiMaker.BackEnd.Model.Enum.StatusType;

@@ -2,7 +2,7 @@ package com.emojiMaker.BackEnd.Bean;
 
 import com.emojiMaker.BackEnd.Bean.SmallBean.UpdateStatusBean;
 import com.emojiMaker.BackEnd.Model.DAO.TagDAO;
-import com.emojiMaker.BackEnd.Model.DTO.Image.ImageDAO;
+import com.emojiMaker.BackEnd.Model.DAO.ImageDAO;
 import com.emojiMaker.BackEnd.Model.DTO.newDTO.RequestUrlEmojiDTO;
 import com.emojiMaker.BackEnd.Repository.ImageDAORepository;
 import com.emojiMaker.BackEnd.Repository.TagDAORepository;
