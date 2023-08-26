@@ -31,7 +31,9 @@ public class LoginController {
 //                .body(userDAO.getUserId());
 //    }
 
-        URI uri = new URI("http://ec2-3-140-252-55.us-east-2.compute.amazonaws.com:5173/login/" +"?userId=" +userDAO.getUserId() +
+//        URI uri = new URI("http://ec2-3-140-252-55.us-east-2.compute.amazonaws.com:5173/login/" +"?userId=" +userDAO.getUserId() +
+//                "&accessToken=" + userDAO.getAccessToken());
+        URI uri = new URI("http://ec2-3-143-68-242.us-east-2.compute.amazonaws.com:5173/login/" +"?userId=" +userDAO.getUserId() +
                 "&accessToken=" + userDAO.getAccessToken());
         responseHeaders.setLocation(uri);
         return new ResponseEntity<>(responseHeaders, HttpStatus.SEE_OTHER);

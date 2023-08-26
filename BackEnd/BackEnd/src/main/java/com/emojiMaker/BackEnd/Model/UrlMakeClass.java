@@ -9,8 +9,8 @@ public class UrlMakeClass {
     private String AiUrl;
 
     public UrlMakeClass() {
-        this.myUrl = "http://3.39.22.13:8080/";
+        this.myUrl = "http://3.34.178.125:8080/";
 //        this.myUrl = "http://localhost:8080/";
-        this.AiUrl = "http://13.114.204.13:8000/";
+        this.AiUrl = "http://219.250.128.100:8000/";
     }
 }
