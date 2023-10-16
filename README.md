@@ -12,7 +12,7 @@
 <br>
 저희 서비스를 통하여 생성된 이모티콘을 통해 SNS 상의 자신만의 표현수단을 만들어 커뮤니케이션의 다양화를 이룩하는 기대가 있습니다. 
 
-**다음은 [프론트엔드 프로젝트](https://github.com/nulzi/MaroMaro)**  페이지입니다. 
+**다음은 [프론트엔드 프로젝트](https://github.com/kim-song-jun/MyEmoji)**  페이지입니다. 
 
 <br/>
 
