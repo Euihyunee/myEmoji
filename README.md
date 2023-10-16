@@ -1,19 +1,4 @@
-<style>
-    .tb{
-            border: 2px;
-            width: 100%;
-            border-collapse: collapse;
-            border: 1px solid #444444;
-    }
-    .tr{
-        border:1px solid #444444;
-    }
-    .tr > td 
-    {
-        border:1px solid #444444;
-    }
 
-</style>
 
 
 # Emoji-Maker
@@ -59,50 +44,51 @@
 ### 개발 환경 
 
 
-<table class="tb"> 
-    <tr class="tr">
-        <td> CDN</td>
-        <td> cafe24</td>
-        <td> Linux</td>
-        <td> 500GB</td>
+
+<table style="border:2px; width: 100%; border-collapse: collapse; border: 1px solid #444444;"> 
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;"> CDN</td>
+        <td style="border:1px solid #444444;"> cafe24</td>
+        <td style="border:1px solid #444444;"> Linux</td>
+        <td style="border:1px solid #444444;"> 500GB</td>
     </tr>
-    <tr class="tr">
-        <td> 서버</td>
-        <td> EC2</td>
-        <td> Linux</td>
-        <td> 50GIB</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;"> 서버</td>
+        <td style="border:1px solid #444444;"> EC2</td>
+        <td style="border:1px solid #444444;"> Linux</td>
+        <td style="border:1px solid #444444;"> 50GIB</td>
     </tr>
-    <tr class="tr">
-        <td rowspan='7'> 소프트웨어</td>
-        <td rowspan='4' > 프레임워크</td>
-        <td> Vue.js</td>
-        <td> 3</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;" rowspan='7'> 소프트웨어</td>
+        <td style="border:1px solid #444444;" rowspan='4' > 프레임워크</td>
+        <td style="border:1px solid #444444;"> Vue.js</td>
+        <td style="border:1px solid #444444;"> 3</td>
     </tr>
-    <tr class="tr">
-        <td> Node.js</td>
-        <td> 16.17</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;"> Node.js</td>
+        <td style="border:1px solid #444444;"> 16.17</td>
     </tr>
-    <tr class="tr">
-        <td> Spring Boot</td>
-        <td> 2.7.3</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;"> Spring Boot</td>
+        <td style="border:1px solid #444444;"> 2.7.3</td>
     </tr>
-    <tr class="tr">
-        <td> Django</td>
-        <td> 4.1</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;"> Django</td>
+        <td style="border:1px solid #444444;"> 4.1</td>
     </tr>
-    <tr class="tr">
-        <td rowspan='2'> 언어 </td>
-        <td> Java</td>
-        <td> 1.8</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;" rowspan='2'> 언어 </td>
+        <td style="border:1px solid #444444;"> Java</td>
+        <td style="border:1px solid #444444;"> 1.8</td>
     </tr >
-    <tr class="tr">
-        <td> Python</td>
-        <td> 3.9 </td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;"> Python</td>
+        <td style="border:1px solid #444444;"> 3.9 </td>
     </tr>
-    <tr class="tr">
-        <td> 데이터베이스</td>
-        <td> MariaDB</td>
-        <td> 10.6</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;"> 데이터베이스</td>
+        <td style="border:1px solid #444444;"> MariaDB</td>
+        <td style="border:1px solid #444444;"> 10.6</td>
     </tr>
 </table>
 
@@ -130,87 +116,86 @@ Django 서버와 Spring 서버, MariaDB를 AWS EC2서버를 통해 배포한다.
 
 #### 3. API Documentation
 
-<table class='tb'> 
-    <tr class="tr">
-        <td> API 제공</td>
-        <td> 설명 </td>
+<table style="border:2px; width: 100%; border-collapse: collapse; border: 1px solid #444444;"> 
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;"> API 제공</td>
+        <td style="border:1px solid #444444;"> 설명 </td>
     </tr>
-    <tr class="tr">
-        <td rowspan='2'> Java-Spring</td>
-        <td> 이미지 업로드 및 ai 처리 요청 기능 </td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;" rowspan='2'> Java-Spring</td>
+        <td style="border:1px solid #444444;"> 이미지 업로드 및 ai 처리 요청 기능 </td>
     </tr>
-    <tr class="tr">
-        <td>  http://3.39.22.13:8080/image/upload</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;">  http://3.39.22.13:8080/image/upload</td>
     </tr>
-    <tr class="tr">
-        <td rowspan='2'> Java-Spring</td>
-        <td>  화풍이 변환된 이미지 리스트 요청</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;" rowspan='2'> Java-Spring</td>
+        <td style="border:1px solid #444444;">  화풍이 변환된 이미지 리스트 요청</td>
     </tr>
-    <tr class="tr">
-        <td>  http://3.39.22.13:8080/tag/status/{requestId}</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;">  http://3.39.22.13:8080/tag/status/{requestId}</td>
     </tr>
-    <tr class="tr">
-        <td rowspan='2'> Java-Spring</td>
-        <td>  특정 화풍으로 이미지를 이모티콘으로 변환 요청</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;" rowspan='2'> Java-Spring</td>
+        <td style="border:1px solid #444444;">  특정 화풍으로 이미지를 이모티콘으로 변환 요청</td>
     </tr>
-    <tr class="tr">
-        <td>  http://3.39.22.13:8080/tag/api/{requestId}/{tagName} </td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;">  http://3.39.22.13:8080/tag/api/{requestId}/{tagName} </td>
     </tr>
-    <tr class="tr">
-        <td rowspan='2'> Java-Spring</td>
-        <td>  특정 화풍으로 변환된 이모티콘 url 리스트 가져오기</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;" rowspan='2'> Java-Spring</td>
+        <td style="border:1px solid #444444;">  특정 화풍으로 변환된 이모티콘 url 리스트 가져오기</td>
     </tr>
-    <tr class="tr">
-        <td>  http://3.39.22.13:8080/tag/select/{requestId}/{tagName}</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;">  http://3.39.22.13:8080/tag/select/{requestId}/{tagName}</td>
     </tr>
-    <tr class="tr">
-        <td rowspan='2'> Java-Spring</td>
-        <td>  업로드된 이미지 가져오기</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;" rowspan='2'> Java-Spring</td>
+        <td style="border:1px solid #444444;">  업로드된 이미지 가져오기</td>
     </tr>
-    <tr class="tr">
-        <td>  http://3.39.22.13:8080/image/api/{requestId}</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;">  http://3.39.22.13:8080/image/api/{requestId}</td>
     </tr>
-    <tr class="tr">
-        <td rowspan='2'> Django-Python(ai)</td>
-        <td> 이미지 화풍 변환</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;" rowspan='2'> Django-Python(ai)</td>
+        <td style="border:1px solid #444444;"> 이미지 화풍 변환</td>
     </tr>
-    <tr class="tr">
-        <td> http://13.114.204.13:8000/tag/{requestId}/{img_url}</td>
-    </tr>
-        <tr class="tr">
-        <td rowspan='2'> Django-Python(ai)</td>
-        <td> 화풍 변환된 이미지 JSON 데이터 POST 요청 보내기</td>
-    </tr>
-    <tr class="tr">
-        <td> http://13.114.204.13:8000/api/picture/{requestId}</td>
-    </tr>
-    <tr>
-        <tr class="tr">
-        <td rowspan='2'> Django-Python(ai)</td>
-        <td> 선택된 화풍 기반으로 이모티콘 생성</td>
-    </tr>
-    <tr class="tr">
-        <td> http://13.114.204.13:8000/stable/{requestId}/{img_url}/{tag_name}</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;"> http://13.114.204.13:8000/tag/{requestId}/{img_url}</td>
     </tr>
         <tr class="tr">
-        <td rowspan='2'> Django-Python(ai)</td>
-        <td> 생성된 이모티콘 JSON 데이터 POST 요청 보내기</td>
+        <td style="border:1px solid #444444;" rowspan='2'> Django-Python(ai)</td>
+        <td style="border:1px solid #444444;"> 화풍 변환된 이미지 JSON 데이터 POST 요청 보내기</td>
     </tr>
-    <tr class="tr">
-        <td> http://13.114.204.13:8000/api/emoji/{requestId}</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;"> http://13.114.204.13:8000/api/picture/{requestId}</td>
     </tr>
-    <tr class="tr">
-        <td rowspan='2'> Django-Python(ai)</td>
-        <td> DB 테이블에 저장된 화풍 변환된 이미지 띄우기</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;" rowspan='2'> Django-Python(ai)</td>
+        <td style="border:1px solid #444444;"> 선택된 화풍 기반으로 이모티콘 생성</td>
     </tr>
-    <tr class="tr">
-        <td> http://13.114.204.13:8000/showImg/{requestId}/{tag_name}/{setNum}</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;"> http://13.114.204.13:8000/stable/{requestId}/{img_url}/{tag_name}</td>
     </tr>
-    <tr class="tr">
-        <td rowspan='2'> Django-Python(ai)</td>
-        <td> DB 테이블에 저장된 이모티콘 gif 띄우기</td>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;" rowspan='2'> Django-Python(ai)</td>
+        <td style="border:1px solid #444444;"> 생성된 이모티콘 JSON 데이터 POST 요청 보내기</td>
     </tr>
-    <tr class="tr">
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;"> http://13.114.204.13:8000/api/emoji/{requestId}</td>
+    </tr>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;" rowspan='2'> Django-Python(ai)</td>
+        <td style="border:1px solid #444444;"> DB 테이블에 저장된 화풍 변환된 이미지 띄우기</td>
+    </tr>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;"> http://13.114.204.13:8000/showImg/{requestId}/{tag_name}/{setNum}</td>
+    </tr>
+    <tr style="border:1px solid #444444;">
+        <td style="border:1px solid #444444;" rowspan='2'> Django-Python(ai)</td>
+        <td style="border:1px solid #444444;"> DB 테이블에 저장된 이모티콘 gif 띄우기</td>
+    </tr>
+    <tr style="border:1px solid #444444;">
         <td> http://13.114.204.13:8000/showEmojiGif/{requestId}/{tag_name}/{emojiTa g}/{setNum}</td>
     </tr>
     
