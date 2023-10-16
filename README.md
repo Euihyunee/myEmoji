@@ -23,18 +23,18 @@
 |<img width="130px" src="https://avatars.githubusercontent.com/u/55569476?v=4"/>|<img width="130px" src="https://avatars.githubusercontent.com/u/98465697?v=4"/>|<img width="130px" src="https://avatars.githubusercontent.com/u/90247223?v=4"/>|<img width="130px" src="https://avatars.githubusercontent.com/u/102578327?v=4"/>|
 |[@RDDCat](https://github.com/RDDcat)|[@Euihyunee](https://github.com/Euihyunee)|[@kim-song-jun](https://github.com/kim-song-jun)|[@dogeonK](https://github.com/dogeonK)|
 |한국공학대학교 소프트웨어학과 4학년|한국공학대학교 소프트웨어학과 4학년|한국공학대학교 소프트웨어학과 4학년|한국공학대학교 소프트웨어학과 4학년|
-|||||
+
 
 
 ### 팀원 역활 
 
-||||
+|이름|역활|담당|
 |:---:|:---:|:---|
 |육마로(팀장)|프로젝트 기획 및 어플리케이션 구조설계|팀의 팀장으로 프로젝트의 전체 구성과 관리 그리고 기획을 담당했습니다.|
 |김도건| 백엔드 개발 및 배포 파이프라인 구성|AI 파이프라인 개발 / Django 백엔드 서버와 해당 서버와 통신을 위한 api 개발과 배포를 담당했습니다.|
 |김성준| 프론트 엔드 개발 및 디자인 시안 작성|Vue.js와 NginX 기반의 프론트엔드 서버의 개발과 배포 담당하였으며 사용자 UI/UX 기획과 디자인을 담당했습니다.|
 |정의현| 메인 백엔드 프로젝트 개발|요청 도메인의 전반적인 부분을 담당했습니다. Spring Boot와 MariaDB로 이루어진 백엔드 서버와 DB의 설계와 구현을 담당했습니다.|
-||||
+
 
 
 
