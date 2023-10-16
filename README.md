@@ -45,7 +45,7 @@
 
 
 
-<table style="border:2px; width: 100%; border-collapse: collapse; border: 1px solid #444444;"> 
+<table style="border:2px; width: 100%; border-collapse: collapse; border: 1px solid #444444; margin: 0 auto;"> 
     <tr style="border:1px solid #444444;">
         <td style="border:1px solid #444444;"> CDN</td>
         <td style="border:1px solid #444444;"> cafe24</td>
