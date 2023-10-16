@@ -1,3 +1,21 @@
+<style>
+    .tb{
+            border: 2px;
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #444444;
+    }
+    .tr{
+        border:1px solid #444444;
+    }
+    .tr > td 
+    {
+        border:1px solid #444444;
+    }
+
+</style>
+
+
 # Emoji-Maker
 > **이모티콘 자동 생성 사이트** <br/> **개발기간: 2022.06 ~ 2023.06** 
 <br/>
@@ -36,24 +54,10 @@
 |정의현| 메인 백엔드 프로젝트 개발|요청 도메인의 전반적인 부분을 담당했습니다. Spring Boot와 MariaDB로 이루어진 백엔드 서버와 DB의 설계와 구현을 담당했습니다.|
 ||||
 
+
+
 ### 개발 환경 
 
-<style>
-    .tb{
-            border: 2px;
-            width: 100%;
-            border-collapse: collapse;
-            border: 1px solid #444444;
-    }
-    .tr{
-        border:1px solid #444444;
-    }
-    .tr > td 
-    {
-        border:1px solid #444444;
-    }
-
-</style>
 
 <table class="tb"> 
     <tr class="tr">
