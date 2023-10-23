@@ -10,6 +10,7 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 media
+settings.py
 
 # If your build process includes running collectstatic, then you probably don't need or want to include staticfiles/
 # in your Git repository. Update and uncomment the following line accordingly.
@@ -403,3 +404,21 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/windows,pycharm,django,python
+
+merge_with_white_bg.png
+original_rem_white.png
+paintingStyle_1.png
+paintingStyle_2.png
+paintingStyle_3.png
+stable_pix2pix_1.png
+stable_pix2pix_2.png
+stable_pix2pix_3.png
+original.png
+original_rmbg.png
+out.gif
+out.mp4
+output.png
+outStyle.png
+resized_img2.png
+test1.png
+test2.png

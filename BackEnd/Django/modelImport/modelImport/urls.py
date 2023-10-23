@@ -22,14 +22,20 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", check),
 
+    # path("api/product/", ProductListAPI.as_view()),
     path("api/picture/<str:rq_id>", PictureAPI.as_view()),
-    path("api/emoji/<str:rq_id>", EmojiAPI.as_view()),
+    path("api/emoji/<str:emojiRequestId>", EmojiAPI.as_view()),
 
-    path("stable/<str:rq_id>/<str:paint>", stable),
-    path("style/<str:rq_id>", style),
+    path("stable/<str:rq_id>/<str:emojiRequestId>/<str:img_url>/<str:paint>", stable),
+    path("tag/<str:rq_id>/<str:img_url>", style),
+    # path("emojiStyle/<str:rq_id>", emojiStyle),
 
-    path("showImg/<str:rq_id>/<str:t_name>", show_img),
+    # path("stable_model/<str:rq_id>/<str:img_url>/<str:paint>", stable_model),
+    # path("tag_model/<str:rq_id>/<str:img_url>", style_model),
+
+    path("showImg/<str:rq_id>/<str:t_name>/<str:s_num>", show_img),
     path("showEmoji/<str:rq_id>/<str:t_name>/<str:e_name>/<str:s_num>", show_emoji),
+    path("showEmojiGif/<str:rq_id>/<str:t_name>/<str:e_name>/<str:s_num>", show_emoji_gif),
 
     path("test/", test_reqeust),
 ]
